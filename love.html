@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>برای قلب من 💗</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    font-family: 'Vazirmatn', sans-serif;
+    background: linear-gradient(135deg, #fff0f3, #fff7ed, #ffe8ee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+    color: #754553;
+}
+
+.card {
+    width: 100%;
+    max-width: 470px;
+    background: rgba(255,255,255,0.85);
+    padding: 35px 23px;
+    border-radius: 30px;
+    box-shadow: 0 12px 40px rgba(220,130,160,0.18);
+    border: 1px solid white;
+    position: relative;
+    z-index: 2;
+}
+
+.main-heart {
+    font-size: 65px;
+    animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+h1 {
+    color: #d66b8b;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #a85f77;
+    font-size: 18px;
+}
+
+.subtitle {
+    color: #b47d8d;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+button {
+    background: linear-gradient(135deg, #ed9bb3, #d96f91);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px #e9a0b655;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.06);
+}
+</style>
+</head>
+
+<body>
+	<div class="card">
+
+    <div class="main-heart">💗</div>
+
+    <h1>برای قلب من...</h1>
+
+    <h2>یه چیزی برات دارم  🥹</h2>
+
+    <p class="subtitle">
+        یه سورپرایز کوچولو برای تو...
+    </p>
+
+    <button onclick="showLove()">
+        اینجا کلیلک کن 🎁
+    </button>
+
+    <div id="letter" style="display:none; background:#fff4f5; padding:22px 18px; border-radius:22px; margin-top:25px; border:1px solid #f9dce4;">
+
+        <div style="font-size:40px;">💌</div>
+
+        <h2>برای تو، قلب من... 💗</h2>
+
+        <p style="font-size:14px; line-height:2.5; color:#754553;">
+
+            امروز یه روز خاصه؛ هم برای تو و هم برای من... 🥹💗
+
+            <br><br>
+
+            چون نه‌تنها روز آرایشگره، بلکه روز مرد هم هست!
+
+            <br>
+
+            پس واجب بود بهت تبریک بگم؛ چون تو بهترین مردِ آرایشگری هستی که توی تمام زندگیم دیدم! 😂💘
+
+            <br><br>
+
+            از اینکه توی زندگیم هستی واقعاً خوشحالم، گوگولیِ من.
+
+            <br>
+
+            امیدوارم همیشه توی مسیر زندگیت بدرخشی، به تمام آرزوهات برسی و من همیشه از دیدن موفقیت‌هات بهت افتخار کنم. 🥹
+
+            <br><br>
+
+            روزت مبارک، قلب من ❤️
+
+            <br><br>
+
+            با عشق...
+
+            <br>
+
+            <strong style="color:#d66b8b; font-size:20px;">
+                ریحانه‌ی تو 🫀
+            </strong>
+
+        </p>
+
+        <div style="font-size:30px;">🌷💗🌷</div>
+
+    </div>
+
+    <div class="footer">
+        ساخته شده با عشق، فقط برای تو ❤️
+    </div>
+
+</div>
+	<style>
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    color: #c18b9c;
+    font-size: 12px;
+}
+
+.floating {
+    position: fixed;
+    bottom: -40px;
+    z-index: 1;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        padding: 28px 17px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+}
+
+</style>
+
+<script>
+
+function showLove() {
+
+    document.getElementById("letter").style.display = "block";
+
+}
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "floating";
+
+    const hearts = ["💗", "💕", "🌸", "❤️", "✨"];
+
+    heart.innerHTML = hearts[
+        Math.floor(Math.random() * hearts.length)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 20) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function() {
+        heart.remove();
+    }, 10000);
+
+}
+
+setInterval(createHeart, 900);
+
+</script>
+
+</body>
+</html>
